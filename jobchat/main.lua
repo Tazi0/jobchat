@@ -10,7 +10,7 @@ AddEventHandler('chatMessage', function(source, name, msg)
     xPlayer = ESX.GetPlayerFromId(source)
     str = xPlayer.job.name
     job = str:gsub("^%l", string.upper)
-    TriggerClientEvent('chatMessage', -1, job .. " ׀ " .. name, { 255, 0, 0 }, string.sub(msg,4))
+    TriggerClientEvent('chatMessage', -1, "^7[ ^4".. job .. " ^7] ( ^3" .. name .. " ^7)", { 255, 0, 0 }, string.sub(msg,4))
 	end
 end)
 
